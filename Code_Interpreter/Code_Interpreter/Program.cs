@@ -5,7 +5,7 @@ namespace Code_Interpreter
     {
         public static void Main(string[] args)
         {
-            string input = " Hello world";
+            //string input = " Hello world";
 
         }
     }

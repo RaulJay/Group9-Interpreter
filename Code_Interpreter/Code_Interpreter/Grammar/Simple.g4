@@ -51,7 +51,6 @@ identifier: ID /*[a-zA-Z_][a-zA-Z0-9_] */;
 
 assignment_statement: identifier ASSIGN expression SEMI;
 
-
 expression: literal
            | identifier
            | expression (PLUS | MINUS | MULT | DIV | MOD) expression
@@ -80,7 +79,7 @@ ifelse_block: block | if_block;
 // Define the lexer rules
 INT_LITERAL: DIGIT+;
 CHAR_LITERAL: '\'' (~'\'' | '\\' .)* '\'';
-ID: LETTER (LETTER | DIGIT | '_')*;
+ID: [a-zA-Z_][a-zA-Z0-9_] /*LETTER (LETTER | DIGIT | '_')*/;
 
 fragment DIGIT: [0-9];
 fragment LETTER: [a-zA-Z];
